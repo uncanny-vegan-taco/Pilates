@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pilates</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Faustina&display=swap"
+      rel="stylesheet"
+    />
+    />
+    <style>
+      body {
+        background: radial-gradient(
+          circle at 10% 20%,
+          rgb(215, 223, 252) 0%,
+          rgb(255, 255, 255) 0%,
+          rgb(215, 223, 252) 84%
+        );
+      }
+      button {
+        color: rgb(150, 150, 150);
+        display: block;
+        font-family: "Faustina", serif;
+        margin: 0 auto;
+        font-size: 1.5em;
+        padding: 10px 8px;
+        background-color: transparent;
+        border: 2px solid rgb(150, 150, 150);
+        border-radius: 10px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: rgb(150, 150, 150);
+        color: rgb(243, 245, 253);
+        transform: scale(1.05);
+      }
+      h1 {
+        text-align: center;
+        font-size: 6em;
+        font-family: "Amatic SC", cursive;
+      }
+      h2 {
+        text-align: center;
+        font-size: 2.5em;
+        font-family: "Amatic SC", cursive;
+        margin-top: 60px;
+        margin-bottom: 60px;
+      }
+      img {
+        width: 100%;
+        border-radius: 10px;
+        border: solid 2px rgb(124, 124, 124);
+        aspect-ratio: 8/10;
+      }
+      p {
+        text-align: center;
+        font-size: 1.3em;
+        line-height: 40px;
+        padding: 5px;
+        border: 2px solid rgb(124, 124, 124);
+        border-radius: 10px;
+        margin: 0;
+      }
+      footer {
+        text-align: center;
+        margin-top: 30px;
+        font-size: 1.2em;
+      }
+      .container {
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        color: rgb(124, 124, 124);
+        font-family: "Faustina", serif;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+        margin-bottom: 40px;
+      }
+      .dark {
+        background: radial-gradient(
+          circle at 24.1% 68.8%,
+          rgb(50, 50, 50) 0%,
+          rgb(0, 0, 0) 99.4%
+        );
+      }
+      .dark .container {
+        color: rgb(175, 175, 175);
+      }
+      .dark button {
+        color: rgb(175, 175, 175);
+        border: solid 2px rgb(175, 175, 175);
+      }
+      .dark button:hover {
+        border: solid 2px black;
+        color: black;
+        background-color: rgb(175, 175, 175);
+      }
+      .dark .findButton:hover {
+        border: solid 2px rgb(37, 37, 37);
+        color: rgb(37, 37, 37);
+        background-color: rgb(175, 175, 175);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="themeButton">Change Theme</button>
+      <h1>Pilates</h1>
+      <hr />
+      <h2>The most intense low-imact workout</h2>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/342/original/pilates1.png?1695835595"
+          alt="Reformer"
+        />
+        <p>
+          Pilates is a form of exercise that aims to improve balance, posture,
+          strength, and flexibility through precise moves and breathing
+          techniques.
+        </p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/343/original/pilates2.png?1695835605"
+          alt="Mermaid Stretch"
+        />
+        <p>
+          It was developed by Joseph Pilates, a German physical trainer, who
+          used it to rehabilitate injured soldiers and dancers in the early 20th
+          century.
+        </p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/344/original/pilates3.png?1695835613"
+          alt="Teaser"
+        />
+        <p>
+          Pilates can be done on a mat or on specialized equipment, such as the
+          reformer, the cadillac, and the wunda chair, that provide resistance
+          and support.
+        </p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/345/original/pilates4.png?1695835622"
+          alt="Reformer Lunges"
+        />
+        <p>
+          Pilates can also enhance mental well-being, as it requires
+          concentration, focus, and awareness of the body and breath. It can
+          reduce stress, improve mood, and boost cognitive function.
+        </p>
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/098/346/original/pilates5.png?1695835630"
+          alt="Ball Bridges"
+        />
+      </div>
+      <button class="findButton">Find a Pilates Studio!</button>
+      <footer>Coded by Kyli White</footer>
+    </div>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      function findStudio() {
+        alert("Look up a Pilates Studio at https://www.google.com/maps 💪");
+      }
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", changeTheme);
+
+      let findButton = document.querySelector(".findButton");
+      findButton.addEventListener("click", findStudio);
+    </script>
+  </body>
+</html>
